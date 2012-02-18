@@ -35,7 +35,7 @@ Execute the following with root permissions i.e. sudo.
 
     rpm --import http://nodejs.tchol.org/RPM-GPG-KEY-tchol
     yum localinstall --nogpgcheck http://nodejs.tchol.org/repocfg/fedora/nodejs-stable-release.noarch.rpm
-    yum install nodejs
+    yum install nodejs npm
     npm install -g less
     ln -svf /usr/lib/node_modules/less/bin/lessc /usr/bin/lessc
     ln -svf /usr/bin/nodejs /usr/bin/node
@@ -50,7 +50,7 @@ Execute the following with root permissions i.e. sudo.
     apt-get install python-software-properties
     add-apt-repository ppa:chris-lea/node.js
     apt-get update
-    apt-get install nodejs
+    apt-get install nodejs npm
     npm install -g less
 
     cp less.conf /etc/apache2/conf.d/less.conf
