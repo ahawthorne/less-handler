@@ -3,7 +3,9 @@ $cachedir = '/tmp/less-compiler/';
 $prefix = 'less-';
 $suffix = '.css';
 
-mkdir($cachedir, 755, true);
+if(!is_dir($cachedir)){
+    mkdir($cachedir, 755, true);
+}
 
 $hash = substr(exec("/usr/bin/env sha1sum ". $_SERVER['PATH_TRANSLATED']), 0, 40);
 $cache_req = $cachedir . $prefix . $hash . $suffix;
